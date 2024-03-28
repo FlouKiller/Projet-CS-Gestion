@@ -103,7 +103,21 @@
             this.dataGridUtilisateurs = new System.Windows.Forms.DataGridView();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
@@ -111,20 +125,7 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabPage3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -560,6 +561,7 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Controls.Add(this.tabPage7);
             this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
@@ -922,6 +924,61 @@
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Statistiques utilisateurs";
             // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(110, 155);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(24, 13);
+            this.label38.TabIndex = 9;
+            this.label38.Text = "0 %";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(116, 115);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(13, 13);
+            this.label34.TabIndex = 7;
+            this.label34.Text = "0";
+            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(26, 138);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(193, 13);
+            this.label39.TabIndex = 8;
+            this.label39.Text = "Pourcentage total d\'incidents déclarés :";
+            // 
+            // comboBox6
+            // 
+            this.comboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Location = new System.Drawing.Point(62, 68);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(121, 21);
+            this.comboBox6.TabIndex = 7;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(49, 102);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(146, 13);
+            this.label35.TabIndex = 6;
+            this.label35.Text = "Nombre d\'incidents déclarés :";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(55, 52);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(134, 13);
+            this.label33.TabIndex = 6;
+            this.label33.Text = "Sélectionner un utilisateur ;";
+            // 
             // groupBox10
             // 
             this.groupBox10.Controls.Add(this.label36);
@@ -938,6 +995,79 @@
             this.groupBox10.TabIndex = 1;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Statistiques techniciens";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(116, 199);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(24, 13);
+            this.label36.TabIndex = 7;
+            this.label36.Text = "0 %";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(35, 182);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(186, 13);
+            this.label37.TabIndex = 6;
+            this.label37.Text = "Pourcentage total d\'incidents résolus :";
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(68, 68);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(121, 21);
+            this.comboBox5.TabIndex = 5;
+            this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(59, 52);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(139, 13);
+            this.label32.TabIndex = 4;
+            this.label32.Text = "Sélectionner un technicien :";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(122, 159);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(13, 13);
+            this.label30.TabIndex = 3;
+            this.label30.Text = "0";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(59, 142);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(139, 13);
+            this.label31.TabIndex = 2;
+            this.label31.Text = "Nombre d\'incidents résolus :";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(122, 119);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(13, 13);
+            this.label29.TabIndex = 1;
+            this.label29.Text = "0";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(51, 102);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(154, 13);
+            this.label28.TabIndex = 0;
+            this.label28.Text = "Nombre d\'incidents en charge :";
             // 
             // groupBox9
             // 
@@ -1011,133 +1141,15 @@
             this.label22.TabIndex = 0;
             this.label22.Text = "Nombre d\'incidents déclarés :";
             // 
-            // label28
+            // tabPage7
             // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(51, 102);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(154, 13);
-            this.label28.TabIndex = 0;
-            this.label28.Text = "Nombre d\'incidents en charge :";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(122, 119);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(13, 13);
-            this.label29.TabIndex = 1;
-            this.label29.Text = "0";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(122, 159);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(13, 13);
-            this.label30.TabIndex = 3;
-            this.label30.Text = "0";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(59, 142);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(139, 13);
-            this.label31.TabIndex = 2;
-            this.label31.Text = "Nombre d\'incidents résolus :";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(59, 52);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(139, 13);
-            this.label32.TabIndex = 4;
-            this.label32.Text = "Sélectionner un technicien :";
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(68, 68);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(121, 21);
-            this.comboBox5.TabIndex = 5;
-            this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(62, 68);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(121, 21);
-            this.comboBox6.TabIndex = 7;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(55, 52);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(134, 13);
-            this.label33.TabIndex = 6;
-            this.label33.Text = "Sélectionner un utilisateur ;";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(116, 115);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(13, 13);
-            this.label34.TabIndex = 7;
-            this.label34.Text = "0";
-            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(49, 102);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(146, 13);
-            this.label35.TabIndex = 6;
-            this.label35.Text = "Nombre d\'incidents déclarés :";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(116, 199);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(24, 13);
-            this.label36.TabIndex = 7;
-            this.label36.Text = "0 %";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(35, 182);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(186, 13);
-            this.label37.TabIndex = 6;
-            this.label37.Text = "Pourcentage total d\'incidents résolus :";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(110, 155);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(24, 13);
-            this.label38.TabIndex = 9;
-            this.label38.Text = "0 %";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(26, 138);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(193, 13);
-            this.label39.TabIndex = 8;
-            this.label39.Text = "Pourcentage total d\'incidents déclarés :";
+            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(768, 400);
+            this.tabPage7.TabIndex = 6;
+            this.tabPage7.Text = "Gestion des chercheurs";
+            this.tabPage7.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -1283,5 +1295,6 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.TabPage tabPage7;
     }
 }

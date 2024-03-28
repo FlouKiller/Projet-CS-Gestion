@@ -172,10 +172,11 @@ namespace projetSlamTest
                     button5.Visible = false;
 
                     // supprimer les pages auquels l'utilisateur connecté n'a pas la permission d'accéder
-                    tabControl1.TabPages.Remove(tabPage1);
-                    tabControl1.TabPages.Remove(tabPage4);
-                    tabControl1.TabPages.Remove(tabPage5);
-                    tabControl1.TabPages.Remove(tabPage6);
+                    tabControl1.TabPages.Remove(tabPage1); // page de gestion du matériel
+                    tabControl1.TabPages.Remove(tabPage4); // page de gestion des techniciens
+                    tabControl1.TabPages.Remove(tabPage5); // page de gestion des utilisateurs
+                    tabControl1.TabPages.Remove(tabPage6); // page des statistiques
+                    tabControl1.TabPages.Remove(tabPage7); // page de gestion des chercheurs
 
                     RefreshUserTickets();
                 }
@@ -192,9 +193,10 @@ namespace projetSlamTest
                     RefreshMateriels();
 
                     // supprimer les pages auquels l'utilisateur connecté n'a pas la permission d'accéder
-                    tabControl1.TabPages.Remove(tabPage4);
-                    tabControl1.TabPages.Remove(tabPage5);
-                    tabControl1.TabPages.Remove(tabPage6);
+                    tabControl1.TabPages.Remove(tabPage4); // page de gestion des techniciens
+                    tabControl1.TabPages.Remove(tabPage5); // page de gestion des utilisateurs
+                    tabControl1.TabPages.Remove(tabPage6); // page des statistiques
+                    tabControl1.TabPages.Remove(tabPage7); // page de gestion des chercheurs
 
                 }
 
