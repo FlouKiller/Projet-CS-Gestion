@@ -137,7 +137,7 @@
             this.label43 = new System.Windows.Forms.Label();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.button12 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridChercheurs = new System.Windows.Forms.DataGridView();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.tabPage3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -166,7 +166,7 @@
             this.tabPage7.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.groupBox13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridChercheurs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -1259,7 +1259,7 @@
             // groupBox13
             // 
             this.groupBox13.Controls.Add(this.button12);
-            this.groupBox13.Controls.Add(this.dataGridView1);
+            this.groupBox13.Controls.Add(this.dataGridChercheurs);
             this.groupBox13.Location = new System.Drawing.Point(6, 6);
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.Size = new System.Drawing.Size(502, 388);
@@ -1277,14 +1277,14 @@
             this.button12.Text = "Supprimer chercheur";
             this.button12.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dataGridChercheurs
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 19);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(490, 316);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridChercheurs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridChercheurs.Location = new System.Drawing.Point(6, 19);
+            this.dataGridChercheurs.MultiSelect = false;
+            this.dataGridChercheurs.Name = "dataGridChercheurs";
+            this.dataGridChercheurs.Size = new System.Drawing.Size(490, 316);
+            this.dataGridChercheurs.TabIndex = 0;
             // 
             // numericUpDown2
             // 
@@ -1354,7 +1354,7 @@
             this.groupBox12.ResumeLayout(false);
             this.groupBox12.PerformLayout();
             this.groupBox13.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridChercheurs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.ResumeLayout(false);
 
@@ -1471,6 +1471,6 @@
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.GroupBox groupBox13;
         private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridChercheurs;
     }
 }

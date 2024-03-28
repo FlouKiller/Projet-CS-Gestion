@@ -58,6 +58,14 @@ namespace projetSlamTest
         /// <summary>
         /// affiche tous les techniciens dans la gridview visible par les responsables
         /// </summary>
+        private void RefreshChercheurs()
+        {
+            var bindingSourceChercheurs = new BindingSource();
+            var chercheurs = Db.GetAllChercheurs();
+            bindingSourceChercheurs.DataSource = chercheurs;
+            dataGridChercheurs.DataSource = bindingSourceChercheurs;
+        }
+
         private void RefreshTechniciens()
         {
             var bindingSourceTechniciens = new BindingSource();
@@ -218,6 +226,8 @@ namespace projetSlamTest
                     RefreshUtilisateurs();
 
                     RefreshComboBoxMateriels();
+
+                    RefreshChercheurs();
 
                     RefreshStats();
                 }
@@ -449,6 +459,15 @@ namespace projetSlamTest
         private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
         {
             RefreshStats();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            var chercheur = new Chercheur(textBox14.Text, textBox13.Text, textBox12.Text, Convert.ToInt16(numericUpDown2.Value));
+
+            Db.AddChercheur(chercheur);
+
+            RefreshChercheurs();
         }
     }
 }
