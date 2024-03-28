@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `chercheur` (
   `specialite_recherche` varchar(255) COLLATE utf16_bin NOT NULL,
   `annee_these` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf16 COLLATE=utf16_bin;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf16 ;
 
 -- --------------------------------------------------------
 
@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `intervient` (
   `technicienId` int NOT NULL,
   PRIMARY KEY (`ticketId`,`technicienId`),
   KEY `id_1` (`technicienId`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf16 COLLATE=utf16_bin;
+) ENGINE=MyISAM DEFAULT CHARSET=utf16 ;
 
 -- --------------------------------------------------------
 
@@ -68,7 +68,7 @@ CREATE TABLE IF NOT EXISTS `materiels` (
   `garantie` varchar(50) COLLATE utf16_bin DEFAULT NULL,
   `fournisseur` varchar(50) COLLATE utf16_bin DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf16 COLLATE=utf16_bin;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf16 ;
 
 -- --------------------------------------------------------
 
@@ -85,7 +85,7 @@ CREATE TABLE IF NOT EXISTS `personnels` (
   `materielId` int NOT NULL,
   PRIMARY KEY (`matricule`),
   UNIQUE KEY `id` (`materielId`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf16 COLLATE=utf16_bin;
+) ENGINE=MyISAM DEFAULT CHARSET=utf16 ;
 
 --
 -- Déchargement des données de la table `personnels`
@@ -107,7 +107,7 @@ CREATE TABLE IF NOT EXISTS `phasetechniciens` (
   `dateFin` date DEFAULT NULL,
   `travailRealise` mediumtext COLLATE utf16_bin,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf16 COLLATE=utf16_bin;
+) ENGINE=MyISAM DEFAULT CHARSET=utf16 ;
 
 -- --------------------------------------------------------
 
@@ -120,7 +120,7 @@ CREATE TABLE IF NOT EXISTS `regions` (
   `id` int NOT NULL AUTO_INCREMENT,
   `nom` varchar(50) COLLATE utf16_bin DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf16 COLLATE=utf16_bin;
+) ENGINE=MyISAM DEFAULT CHARSET=utf16 ;
 
 -- --------------------------------------------------------
 
@@ -137,7 +137,7 @@ CREATE TABLE IF NOT EXISTS `techniciens` (
   `matricule` varchar(50) COLLATE utf16_bin NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `matricule` (`matricule`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf16 COLLATE=utf16_bin;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf16 ;
 
 --
 -- Déchargement des données de la table `techniciens`
@@ -165,7 +165,7 @@ CREATE TABLE IF NOT EXISTS `tickets` (
   PRIMARY KEY (`id`),
   KEY `id_1` (`technicienId`),
   KEY `id_2` (`materielId`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf16 COLLATE=utf16_bin;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf16 ;
 
 -- --------------------------------------------------------
 
@@ -179,7 +179,7 @@ CREATE TABLE IF NOT EXISTS `travaille` (
   `idRegion` int NOT NULL,
   PRIMARY KEY (`matricule`,`idRegion`),
   KEY `id` (`idRegion`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf16 COLLATE=utf16_bin;
+) ENGINE=MyISAM DEFAULT CHARSET=utf16 ;
 
 -- --------------------------------------------------------
 
@@ -197,7 +197,7 @@ CREATE TABLE IF NOT EXISTS `visiteurs` (
   `matricule` varchar(50) COLLATE utf16_bin NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `matricule` (`matricule`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf16 COLLATE=utf16_bin;
+) ENGINE=MyISAM DEFAULT CHARSET=utf16 ;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
