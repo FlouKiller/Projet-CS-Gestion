@@ -625,5 +625,78 @@ namespace projetSlamTest
             Connection.Close();
             return materiel;
         }
+
+        /// <summary>
+        /// ajoute un chercheur dans la bdd
+        /// </summary>
+        /// <param name="chercheur">le chercheur à ajouter (objet)</param>
+        public static void AddChercheur(Chercheur chercheur)
+        {
+            Connection.Open();
+            var cmd = Connection.CreateCommand();
+            cmd.CommandText = "INSERT INTO chercheur (nom, prenom, specialite_recherche, annee_these) " +
+                              "VALUES (@nom, @prenom, @specialite_recherche, @annee_these)";
+            cmd.Parameters.AddWithValue("@matricule", chercheur.Nom);
+            cmd.Parameters.AddWithValue("@dateEmbauche", chercheur.Prenom);
+            cmd.Parameters.AddWithValue("@motDePasse", chercheur.SpecialiteRecherche);
+            cmd.Parameters.AddWithValue("@type", chercheur.AnneeThese);
+            cmd.ExecuteNonQuery();
+            Connection.Close();
+        }
+
+        /// <summary>
+        /// supprime un chercheur dans la bdd
+        /// </summary>
+        /// <param name="chercheur">le chercheur à supprimer (objet)</param>
+        public static void RemoveChercheur(Chercheur chercheur)
+        {
+            Connection.Open();
+            var cmd = Connection.CreateCommand();
+            cmd.CommandText = "DELETE FROM chercheur WHERE id = @id";
+            cmd.Parameters.AddWithValue("@id", chercheur.Id);
+            cmd.ExecuteNonQuery();
+            Connection.Close();
+        }
+
+        /// <summary>
+        /// permet de récupérer tous les chercheurs
+        /// </summary>
+        /// <returns>retourne une liste de tous les chercheurs existants</returns>
+        public static List<Chercheur> GetAllChercheurs()
+        {
+            var chercheurs = new List<Chercheur>();
+            Connection.Open();
+            var cmd = Connection.CreateCommand();
+            cmd.CommandText = "SELECT * FROM chercheur";
+            var reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                var chercheur = new Chercheur(reader.GetInt32(0), reader.GetString(1), reader.GetString(2),
+                reader.GetString(3), reader.GetInt32(4));
+                chercheurs.Add(chercheur);
+            }
+
+            Connection.Close();
+            return chercheurs;
+        }
+
+        /// <summary>
+        /// permet d'obtenir un chercheur a partir de son id
+        /// </summary>
+        /// <param name="id">l'id du chercheur</param>
+        /// <returns>un chercheur (objet)</returns>
+        public static Chercheur GetChercheur(int id)
+        {
+            Connection.Open();
+            var cmd = Connection.CreateCommand();
+            cmd.CommandText = "SELECT * FROM chercheur WHERE id = @id";
+            cmd.Parameters.AddWithValue("@id", id);
+            var reader = cmd.ExecuteReader();
+            reader.Read();
+            var chercheur = new Chercheur(reader.GetInt32(0), reader.GetString(1), reader.GetString(2),
+                reader.GetString(3), reader.GetInt32(4));
+            Connection.Close();
+            return chercheur;
+        }
     }
 }
