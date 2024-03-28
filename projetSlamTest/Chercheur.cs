@@ -25,6 +25,14 @@ namespace projetSlamTest
             AnneeThese = anneeThese;
         }
 
+        public Chercheur(string nom, string prenom, string specialiteRecherche, int anneeThese)
+        {
+            Nom = nom;
+            Prenom = prenom;
+            SpecialiteRecherche = specialiteRecherche;
+            AnneeThese = anneeThese;
+        }
+
         /// <summary>
         /// Obtient ou définit l'id du chercheur.
         /// </summary>
