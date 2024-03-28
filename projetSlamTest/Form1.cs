@@ -18,6 +18,7 @@ namespace projetSlamTest
         private Materiel _selectedMateriel;
         private Technicien _selectedTechnicien;
         private Personnel _selectedUser;
+        private Chercheur _selectedChercheur;
 
         /// <summary>
         /// rafrachit les tickets de l'utilisateur et les affiche dans le datagridview correspondant
@@ -170,6 +171,7 @@ namespace projetSlamTest
                 dataGridView3.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                 dataGridTechniciens.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                 dataGridUtilisateurs.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                dataGridChercheurs.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
                 if (Utilisateur.Type == 0)
                 {
@@ -468,6 +470,28 @@ namespace projetSlamTest
             Db.AddChercheur(chercheur);
 
             RefreshChercheurs();
+        }
+
+        private void dataGridMateriel_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            Db.RemoveChercheur(_selectedChercheur);
+            RefreshChercheurs();
+        }
+
+        private void dataGridChercheurs_Click(object sender, EventArgs e)
+        {
+            if (dataGridChercheurs.SelectedRows.Count <= 0) return; // si y'a rien on skip
+
+            var selectedRow = dataGridChercheurs.SelectedRows[0]; // Prend la première ligne sélectionnée
+            var cellValue = (int)selectedRow.Cells["id"].Value;
+            _selectedChercheur = Db.GetChercheur(cellValue);
+            if (_selectedChercheur == null) return;
+            button12.Enabled = true;
         }
     }
 }
