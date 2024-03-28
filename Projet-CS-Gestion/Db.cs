@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using MySql.Data.MySqlClient;
 
-namespace projetSlamTest
+namespace ProjetCSGestion
 {
     /// <summary>
     /// Cette classe représente les actions sur la base de données.

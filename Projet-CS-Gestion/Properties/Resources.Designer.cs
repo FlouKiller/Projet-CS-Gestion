@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace projetSlamTest.Properties
+namespace ProjetCSGestion.Properties
 {
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
@@ -45,7 +45,7 @@ namespace projetSlamTest.Properties
                 if ((resourceMan == null))
                 {
                     global::System.Resources.ResourceManager temp =
-                        new global::System.Resources.ResourceManager("projetSlamTest.Properties.Resources",
+                        new global::System.Resources.ResourceManager("ProjetCSGestion.Properties.Resources",
                             typeof(Resources).Assembly);
                     resourceMan = temp;
                 }

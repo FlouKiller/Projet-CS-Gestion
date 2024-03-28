@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace projetSlamTest
+namespace ProjetCSGestion
 {
     /// <summary>
     /// chargement du formulaire principal

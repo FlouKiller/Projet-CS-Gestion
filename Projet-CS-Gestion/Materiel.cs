@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 
-namespace projetSlamTest
+namespace ProjetCSGestion
 {
     /// <summary>
     /// Cette classe représente le matériel informatique utilisé dans votre système.

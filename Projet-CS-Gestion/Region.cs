@@ -1,4 +1,4 @@
-﻿namespace projetSlamTest
+﻿namespace ProjetCSGestion
 {
     /// <summary>
     /// Cette classe représente une région, qui peut correspondre à un pays.

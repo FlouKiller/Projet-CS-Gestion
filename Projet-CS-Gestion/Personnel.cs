@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace projetSlamTest
+namespace ProjetCSGestion
 {
     /// <summary>
     /// Cette classe représente le personnel de votre système.

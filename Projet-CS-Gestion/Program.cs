@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace projetSlamTest
+namespace ProjetCSGestion
 {
     internal static class Program
     {

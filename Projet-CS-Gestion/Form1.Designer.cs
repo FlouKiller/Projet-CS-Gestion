@@ -1,4 +1,4 @@
-﻿namespace projetSlamTest
+﻿namespace ProjetCSGestion
 {
     partial class Form1
     {
