@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace projetSlamTest
 {
-    internal class Chercheur
+    public class Chercheur
     {
         /// <summary>
         /// Initialise une nouvelle instance de la classe Chercheur.
