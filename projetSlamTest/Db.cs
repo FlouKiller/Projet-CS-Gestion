@@ -636,10 +636,10 @@ namespace projetSlamTest
             var cmd = Connection.CreateCommand();
             cmd.CommandText = "INSERT INTO chercheur (nom, prenom, specialite_recherche, annee_these) " +
                               "VALUES (@nom, @prenom, @specialite_recherche, @annee_these)";
-            cmd.Parameters.AddWithValue("@matricule", chercheur.Nom);
-            cmd.Parameters.AddWithValue("@dateEmbauche", chercheur.Prenom);
-            cmd.Parameters.AddWithValue("@motDePasse", chercheur.SpecialiteRecherche);
-            cmd.Parameters.AddWithValue("@type", chercheur.AnneeThese);
+            cmd.Parameters.AddWithValue("@nom", chercheur.Nom);
+            cmd.Parameters.AddWithValue("@prenom", chercheur.Prenom);
+            cmd.Parameters.AddWithValue("@specialite_recherche", chercheur.SpecialiteRecherche);
+            cmd.Parameters.AddWithValue("@annee_these", chercheur.AnneeThese);
             cmd.ExecuteNonQuery();
             Connection.Close();
         }
