@@ -126,6 +126,19 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.button11 = new System.Windows.Forms.Button();
+            this.label40 = new System.Windows.Forms.Label();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.button12 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.tabPage3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -150,6 +163,11 @@
             this.groupBox11.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox9.SuspendLayout();
+            this.tabPage7.SuspendLayout();
+            this.groupBox12.SuspendLayout();
+            this.groupBox13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage3
@@ -1143,6 +1161,8 @@
             // 
             // tabPage7
             // 
+            this.tabPage7.Controls.Add(this.groupBox12);
+            this.tabPage7.Controls.Add(this.groupBox13);
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
@@ -1150,6 +1170,143 @@
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Gestion des chercheurs";
             this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.numericUpDown2);
+            this.groupBox12.Controls.Add(this.button11);
+            this.groupBox12.Controls.Add(this.label40);
+            this.groupBox12.Controls.Add(this.textBox12);
+            this.groupBox12.Controls.Add(this.textBox13);
+            this.groupBox12.Controls.Add(this.label41);
+            this.groupBox12.Controls.Add(this.label42);
+            this.groupBox12.Controls.Add(this.textBox14);
+            this.groupBox12.Controls.Add(this.label43);
+            this.groupBox12.Location = new System.Drawing.Point(514, 6);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(248, 388);
+            this.groupBox12.TabIndex = 3;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Ajouter un technicien";
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(62, 272);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(125, 41);
+            this.button11.TabIndex = 3;
+            this.button11.Text = "Ajouter chercheur";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(88, 194);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(73, 13);
+            this.label40.TabIndex = 16;
+            this.label40.Text = "Année thèse :";
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(73, 161);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(100, 20);
+            this.textBox12.TabIndex = 15;
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(73, 112);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(100, 20);
+            this.textBox13.TabIndex = 14;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(62, 145);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(125, 13);
+            this.label41.TabIndex = 13;
+            this.label41.Text = "Specialité de recherche :";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(100, 96);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(49, 13);
+            this.label42.TabIndex = 12;
+            this.label42.Text = "Prénom :";
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(73, 63);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(100, 20);
+            this.textBox14.TabIndex = 11;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(107, 47);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(35, 13);
+            this.label43.TabIndex = 10;
+            this.label43.Text = "Nom :";
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.button12);
+            this.groupBox13.Controls.Add(this.dataGridView1);
+            this.groupBox13.Location = new System.Drawing.Point(6, 6);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(502, 388);
+            this.groupBox13.TabIndex = 2;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Liste des chercheurs";
+            // 
+            // button12
+            // 
+            this.button12.Enabled = false;
+            this.button12.Location = new System.Drawing.Point(6, 341);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(125, 41);
+            this.button12.TabIndex = 2;
+            this.button12.Text = "Supprimer chercheur";
+            this.button12.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 19);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(490, 316);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(73, 210);
+            this.numericUpDown2.Maximum = new decimal(new int[] {
+            2100,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Minimum = new decimal(new int[] {
+            1900,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(100, 20);
+            this.numericUpDown2.TabIndex = 17;
+            this.numericUpDown2.Value = new decimal(new int[] {
+            1900,
+            0,
+            0,
+            0});
             // 
             // Form1
             // 
@@ -1193,6 +1350,12 @@
             this.groupBox10.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
+            this.tabPage7.ResumeLayout(false);
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
+            this.groupBox13.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1296,5 +1459,18 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
