@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mar. 10 oct. 2023 à 09:10
--- Version du serveur : 5.7.36
--- Version de PHP : 7.4.26
+-- Généré le : jeu. 28 mars 2024 à 08:32
+-- Version du serveur : 8.0.31
+-- Version de PHP : 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,16 +24,32 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `chercheur`
+--
+
+DROP TABLE IF EXISTS `chercheur`;
+CREATE TABLE IF NOT EXISTS `chercheur` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nom` varchar(255) COLLATE utf16_bin NOT NULL,
+  `prenom` varchar(255) COLLATE utf16_bin NOT NULL,
+  `specialite_recherche` varchar(255) COLLATE utf16_bin NOT NULL,
+  `annee_these` int NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf16 COLLATE=utf16_bin;
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `intervient`
 --
 
 DROP TABLE IF EXISTS `intervient`;
 CREATE TABLE IF NOT EXISTS `intervient` (
-  `ticketId` int(11) NOT NULL,
-  `technicienId` int(11) NOT NULL,
+  `ticketId` int NOT NULL,
+  `technicienId` int NOT NULL,
   PRIMARY KEY (`ticketId`,`technicienId`),
   KEY `id_1` (`technicienId`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf16 COLLATE=utf16_bin;
 
 -- --------------------------------------------------------
 
@@ -43,16 +59,16 @@ CREATE TABLE IF NOT EXISTS `intervient` (
 
 DROP TABLE IF EXISTS `materiels`;
 CREATE TABLE IF NOT EXISTS `materiels` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `processeur` varchar(50) DEFAULT NULL,
-  `memoire` varchar(50) DEFAULT NULL,
-  `disque` varchar(50) DEFAULT NULL,
-  `logicielsInstalles` text,
+  `id` int NOT NULL AUTO_INCREMENT,
+  `processeur` varchar(50) COLLATE utf16_bin DEFAULT NULL,
+  `memoire` varchar(50) COLLATE utf16_bin DEFAULT NULL,
+  `disque` varchar(50) COLLATE utf16_bin DEFAULT NULL,
+  `logicielsInstalles` mediumtext COLLATE utf16_bin,
   `dateAchat` date DEFAULT NULL,
-  `garantie` varchar(50) DEFAULT NULL,
-  `fournisseur` varchar(50) DEFAULT NULL,
+  `garantie` varchar(50) COLLATE utf16_bin DEFAULT NULL,
+  `fournisseur` varchar(50) COLLATE utf16_bin DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf16 COLLATE=utf16_bin;
 
 -- --------------------------------------------------------
 
@@ -62,14 +78,14 @@ CREATE TABLE IF NOT EXISTS `materiels` (
 
 DROP TABLE IF EXISTS `personnels`;
 CREATE TABLE IF NOT EXISTS `personnels` (
-  `matricule` varchar(50) NOT NULL,
+  `matricule` varchar(50) COLLATE utf16_bin NOT NULL,
   `dateEmbauche` date DEFAULT NULL,
-  `motDePasse` varchar(50) DEFAULT NULL,
-  `type` int(11) DEFAULT NULL,
-  `materielId` int(11) NOT NULL,
+  `motDePasse` varchar(50) COLLATE utf16_bin DEFAULT NULL,
+  `type` int DEFAULT NULL,
+  `materielId` int NOT NULL,
   PRIMARY KEY (`matricule`),
   UNIQUE KEY `id` (`materielId`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf16 COLLATE=utf16_bin;
 
 --
 -- Déchargement des données de la table `personnels`
@@ -86,12 +102,12 @@ INSERT INTO `personnels` (`matricule`, `dateEmbauche`, `motDePasse`, `type`, `ma
 
 DROP TABLE IF EXISTS `phasetechniciens`;
 CREATE TABLE IF NOT EXISTS `phasetechniciens` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `dateDebut` date DEFAULT NULL,
   `dateFin` date DEFAULT NULL,
-  `travailRealise` text,
+  `travailRealise` mediumtext COLLATE utf16_bin,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf16 COLLATE=utf16_bin;
 
 -- --------------------------------------------------------
 
@@ -101,10 +117,10 @@ CREATE TABLE IF NOT EXISTS `phasetechniciens` (
 
 DROP TABLE IF EXISTS `regions`;
 CREATE TABLE IF NOT EXISTS `regions` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nom` varchar(50) DEFAULT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nom` varchar(50) COLLATE utf16_bin DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf16 COLLATE=utf16_bin;
 
 -- --------------------------------------------------------
 
@@ -114,14 +130,14 @@ CREATE TABLE IF NOT EXISTS `regions` (
 
 DROP TABLE IF EXISTS `techniciens`;
 CREATE TABLE IF NOT EXISTS `techniciens` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `niveau` varchar(50) DEFAULT NULL,
-  `formation` varchar(50) DEFAULT NULL,
-  `competences` varchar(50) DEFAULT NULL,
-  `matricule` varchar(50) NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
+  `niveau` varchar(50) COLLATE utf16_bin DEFAULT NULL,
+  `formation` varchar(50) COLLATE utf16_bin DEFAULT NULL,
+  `competences` varchar(50) COLLATE utf16_bin DEFAULT NULL,
+  `matricule` varchar(50) COLLATE utf16_bin NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `matricule` (`matricule`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf16 COLLATE=utf16_bin;
 
 --
 -- Déchargement des données de la table `techniciens`
@@ -138,26 +154,18 @@ INSERT INTO `techniciens` (`id`, `niveau`, `formation`, `competences`, `matricul
 
 DROP TABLE IF EXISTS `tickets`;
 CREATE TABLE IF NOT EXISTS `tickets` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `objet` text,
-  `niveauUrgence` int(11) DEFAULT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
+  `objet` mediumtext COLLATE utf16_bin,
+  `niveauUrgence` int DEFAULT NULL,
   `dateCreation` datetime DEFAULT NULL,
-  `etatDemande` varchar(50) DEFAULT NULL,
-  `technicienId` int(11) DEFAULT NULL,
-  `materielId` int(11) NOT NULL,
-  `personnelMatricule` varchar(50) NOT NULL,
+  `etatDemande` varchar(50) COLLATE utf16_bin DEFAULT NULL,
+  `technicienId` int DEFAULT NULL,
+  `materielId` int NOT NULL,
+  `personnelMatricule` varchar(50) COLLATE utf16_bin NOT NULL,
   PRIMARY KEY (`id`),
   KEY `id_1` (`technicienId`),
   KEY `id_2` (`materielId`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
-
---
--- Déchargement des données de la table `tickets`
---
-
-INSERT INTO `tickets` (`id`, `objet`, `niveauUrgence`, `dateCreation`, `etatDemande`, `technicienId`, `materielId`, `personnelMatricule`) VALUES
-(1, 'Probleme informatique', 5, '2023-10-10 07:00:41', 'en cours', 1, 1, 'FLST012'),
-(2, 'probleme test 2', 1, '2023-10-10 08:47:40', 'en cours', 1, 1, 'AAAA000');
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf16 COLLATE=utf16_bin;
 
 -- --------------------------------------------------------
 
@@ -167,11 +175,11 @@ INSERT INTO `tickets` (`id`, `objet`, `niveauUrgence`, `dateCreation`, `etatDema
 
 DROP TABLE IF EXISTS `travaille`;
 CREATE TABLE IF NOT EXISTS `travaille` (
-  `matricule` varchar(50) NOT NULL,
-  `idRegion` int(11) NOT NULL,
+  `matricule` varchar(50) COLLATE utf16_bin NOT NULL,
+  `idRegion` int NOT NULL,
   PRIMARY KEY (`matricule`,`idRegion`),
   KEY `id` (`idRegion`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf16 COLLATE=utf16_bin;
 
 -- --------------------------------------------------------
 
@@ -181,15 +189,15 @@ CREATE TABLE IF NOT EXISTS `travaille` (
 
 DROP TABLE IF EXISTS `visiteurs`;
 CREATE TABLE IF NOT EXISTS `visiteurs` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `prime` varchar(50) DEFAULT NULL,
-  `avantages` varchar(50) DEFAULT NULL,
-  `budget` varchar(50) DEFAULT NULL,
-  `objectif` varchar(50) DEFAULT NULL,
-  `matricule` varchar(50) NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
+  `prime` varchar(50) COLLATE utf16_bin DEFAULT NULL,
+  `avantages` varchar(50) COLLATE utf16_bin DEFAULT NULL,
+  `budget` varchar(50) COLLATE utf16_bin DEFAULT NULL,
+  `objectif` varchar(50) COLLATE utf16_bin DEFAULT NULL,
+  `matricule` varchar(50) COLLATE utf16_bin NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `matricule` (`matricule`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf16 COLLATE=utf16_bin;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
